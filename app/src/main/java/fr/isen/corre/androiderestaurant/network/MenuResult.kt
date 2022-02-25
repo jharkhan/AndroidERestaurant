@@ -1,4 +1,7 @@
 package fr.isen.corre.androiderestaurant.network
 
-class MenuResult {
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+class MenuResult(@SerializedName("data") val data: List<Category>): Serializable{
 }

@@ -1,4 +1,10 @@
 package fr.isen.corre.androiderestaurant.network
 
-class Category {
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+class Category(
+    @SerializedName("name_fr") val name: String,
+    @SerializedName("items") val items: List<Dish>
+    ): Serializable {
 }

@@ -60,8 +60,8 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:backgroundTint="@color/transparent"
-            android:tint="@color/orange"
-            app:srcCompat="@drawable/ic_less" />
+            app:srcCompat="@drawable/ic_less"
+            app:tint="@color/orange" />
 
         <TextView
             android:id="@+id/quantity"
@@ -80,8 +80,8 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:backgroundTint="@color/transparent"
-            android:tint="@color/orange"
-            app:srcCompat="@drawable/ic_more" />
+            app:srcCompat="@drawable/ic_more"
+            app:tint="@color/orange" />
 
     </LinearLayout>
 

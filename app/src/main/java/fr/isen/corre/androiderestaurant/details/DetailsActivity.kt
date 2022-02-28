@@ -2,6 +2,8 @@ package fr.isen.corre.androiderestaurant.details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.material.snackbar.Snackbar
+import fr.isen.corre.androiderestaurant.BaseActivity
 import fr.isen.corre.androiderestaurant.CategoryActivity
 import fr.isen.corre.androiderestaurant.R
 import fr.isen.corre.androiderestaurant.basket.Basket
@@ -9,7 +11,7 @@ import fr.isen.corre.androiderestaurant.databinding.ActivityDetailsBinding
 import fr.isen.corre.androiderestaurant.network.Dish
 import kotlin.math.max
 
-class DetailsActivity : AppCompatActivity() {
+class DetailsActivity : BaseActivity() {
     private lateinit var binding: ActivityDetailsBinding
     private var currentDish: Dish? = null
     private var itemCount = 1F
@@ -36,6 +38,8 @@ class DetailsActivity : AppCompatActivity() {
                 val basket = Basket.getBasket(this)
                 basket.addItem(dish, itemCount.toInt())
                 basket.save(this)
+                Snackbar.make(binding.root, R.string.added_item, Snackbar.LENGTH_LONG).show()
+                invalidateOptionsMenu()
             }
         }
         binding.buttonLess.setOnClickListener {

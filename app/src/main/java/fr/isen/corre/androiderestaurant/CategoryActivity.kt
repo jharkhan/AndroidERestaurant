@@ -36,7 +36,7 @@ enum class EntPlDes {
     }
 }
 
-class CategoryActivity : AppCompatActivity() {
+class CategoryActivity : BaseActivity() {
     private lateinit var binding: ActivityCategoryBinding
     private lateinit var category: EntPlDes
 
